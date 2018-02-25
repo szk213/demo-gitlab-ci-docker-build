@@ -24,3 +24,8 @@ check_interval = 0
 
 ## 参考
 - [Config when use service docker:dind](https://gitlab.com/gitlab-org/gitlab-runner/issues/1678)
+
+## プロキシ設定
+
+### 参考
+- [Docker Runners won't work behind a proxy](https://gitlab.com/gitlab-org/gitlab-runner/issues/1537)
