@@ -2,7 +2,8 @@
 
 privilegedをtrueにしてある
 
-```/etc/gitlab-runner/config.toml
+/etc/gitlab-runner/config.toml
+```
 concurrent = 1
 check_interval = 0
 
@@ -20,3 +21,6 @@ check_interval = 0
     shm_size = 0
   [runners.cache]
 ```
+
+## 参考
+- [Config when use service docker:dind](https://gitlab.com/gitlab-org/gitlab-runner/issues/1678)
