@@ -1,9 +1,12 @@
- build:
-   image: docker:latest
-   services:
-   - docker:dind
-   stage: build
-   script:
-     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.rf:5000
-     - docker build -t registry.rf:5000/group/project/image:latest .
-     - docker push registry.rf:5000/group/project/image:latest
+variables:
+  DOCKER_DRIVER: overlay2
+services:
+  - name: docker:dind
+    command: ["--insecure-registry=registry.rf"]
+build:
+  image: docker:latest
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.rf:5000
+    - docker build -t registry.rf:5000/group/project/image:latest .
+    - docker push registry.rf:5000/group/project/image:latest
