@@ -2,7 +2,7 @@
 
 privilegedをtrueにしてある
 
-'''/etc/gitlab-runner/config.toml
+```/etc/gitlab-runner/config.toml
 concurrent = 1
 check_interval = 0
 
@@ -19,4 +19,4 @@ check_interval = 0
     volumes = ["/cache"]
     shm_size = 0
   [runners.cache]
-'''
+```
