@@ -4,6 +4,6 @@
    - docker:dind
    stage: build
    script:
-     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.rf
-     - docker build -t registry.rf/group/project/image:latest .
-     - docker push registry.rf/group/project/image:latest
+     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.rf:80
+     - docker build -t registry.rf:80/group/project/image:latest .
+     - docker push registry.rf:80/group/project/image:latest
