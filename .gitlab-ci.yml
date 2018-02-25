@@ -2,7 +2,7 @@ variables:
   DOCKER_DRIVER: overlay2
 services:
   - name: docker:dind
-#    command: ["--insecure-registry=registry.rf:5000"]
+    command: ["--insecure-registry=registry.rf:5000"]
 build:
   image: docker:latest
   stage: build
