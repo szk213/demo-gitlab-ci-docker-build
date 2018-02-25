@@ -1,0 +1,9 @@
+ build:
+   image: docker:latest
+   services:
+   - docker:dind
+   stage: build
+   script:
+     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry:5000
+     - docker build -t registry:5000/group/project/image:latest .
+     - docker push registry:5000/group/project/image:latest
