@@ -8,5 +8,5 @@ build:
   stage: build
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.rf:5000
-    - docker build -t registry.rf:5000/group/project/image:latest .
-    - docker push registry.rf:5000/group/project/image:latest
+    - docker build -t registry.rf:5000/test/abc/image:latest .
+    - docker push registry.rf:5000/test/abc/image:latest
